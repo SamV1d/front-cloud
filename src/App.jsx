@@ -92,6 +92,12 @@ function App() {
       notes: '',
     });
   };
+  const API_URL = 'http://3.144.5.210:3000';
+
+  const response = await fetch(`${API_URL}/upload`, {
+    method: 'POST',
+    body: formData,
+  });
 
   return (
     <div className="app">
